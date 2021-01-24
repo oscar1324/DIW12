@@ -87,53 +87,52 @@ blockquote {
 }
 
 /** Grid aqui**/
-
 /*contenido principal, información, entrada, imagen1, imagen2*/
-/*
-.contenido-principal{
-    grid-column: 1/3 ;
-    display: flex;
-    align-items: center;
-}
-*/
 
 .titulo{
-    display: flex;
+    grid-column:1/3 ;
+    align-content: center;
     
-   /*
-    display: flex;
-    justify-content: flex-end;
-   */
 }
 .entrada{
-    /*    
-    display:grid;
-   */
+    grid-column-start: 2;
+    grid-row-end: 4;
+    
 }
 .informacion{
-    /*
-    display: grid;
-    float: left;*/
+    grid-column-start:1 ;
+    grid-row-start: 2;
 
-    
-    
+
 }
 .imagen1{
+   grid-column-start:1 ;
+   grid-row-start: 4;
    
 }
 .imagen2{
-   
+   grid-column-start: 3;
+   grid-row-start: 3;
 }
-.contenido-principal{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr ;
 
+@media screen and (min-width: 768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr ;
+        grid-template-rows: 10% 25%  25% 25%;
+        gap: 1rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    
+    }
 }
+
 .contenedor{
     display: flex;
     grid-template-columns: 25%  25%  25%  25% ;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 900px) {
     .contenedor{
